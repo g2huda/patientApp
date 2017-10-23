@@ -1,2 +1,13 @@
-<h1>Patient Information</h1>
-<p>info is here</p>
+<% @patient.each do |info| %>
+    <h1>Patient Information</h1>
+    <p>
+        Name of patient: <%= info.name %><br />
+        Organization name: <%= info.organization %><br />
+        Gender: <%= info.gender %><br />
+        Number of conditions they have: <%= info.conditionsTotal %><br />
+        List of all conditions: <br />
+        <% info.conditionsList.each do |con| %>
+            - <%= con %><br />
+        <% end %>
+    </p>
+<% end %>

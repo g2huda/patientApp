@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  organization: MyString
+  gender: MyString
+  conditionsTotal: 1
+  conditionsList: 
+
+two:
+  name: MyString
+  organization: MyString
+  gender: MyString
+  conditionsTotal: 1
+  conditionsList: 

@@ -1,0 +1,45 @@
+{
+  "resourceType": "Patient", //<-- this name/value should be saparated by comma
+  "id": "xcda",
+  "text":{ //<- "text" value is a nested json object. should start and end with braces
+    "status": "generated",
+    "div": "<div>\n      \n      <p>Henry Levin the 7th</p>\n    \n    </div>"//<-tags should match in html format
+  },
+  "identifier": [ //<-a name in json file should be followed by a colon
+    {
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "system": "htt://hl7.org/fhir/v2/0203", //<-- name/value in json should be seperated by comma if followed by another name/value
+            "code": "MR"
+          }
+        ]
+      },
+      "system": "urn:oid:2.16.840.1.113883.19.5", //<-- comma was missing
+      "value": "12345"
+    }
+  ], //<-- closing bracets and braces where missing
+  "active": true,
+  "name": [
+    {
+      "family": [
+        "Levin"
+      ], //<-- comma was missing
+      "given": [
+        "Henry"
+      ]
+    }
+  ], //<-- comma was missing
+  "gender": "male", //<-- the name was missing an ending double quote 
+  "birthDate": "2002-09-24", //<-- comma was missing
+  "managingOrganization": {
+    "reference": "Organization/2.16.840.1.113883.19.5",
+    "display": "University Health Network"
+  },
+  "conditions": [
+    "Diabetes",
+    "High blood pressure", //<-- comma was missing
+    "Asthma"
+  ]
+}
