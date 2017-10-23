@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20171022013025) do
     t.string "gender"
     t.integer "conditionsTotal"
     t.string "conditionsList"
-    t.integer "_id"
+    t.string "_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -5,7 +5,7 @@ class CreatePatients < ActiveRecord::Migration[5.1]
       t.string :organization
       t.string :gender
       t.integer :conditionsTotal
-      t.string :conditionsList, defualt => [].to_yaml
+      t.string :conditionsList
       t.string :_id
 
       t.timestamps
